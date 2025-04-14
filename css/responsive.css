@@ -1,0 +1,314 @@
+/* 추가 반응형 스타일 */
+/* 모든 페이지에 적용할 공통 반응형 스타일 */
+@media (max-width: 992px) {
+    /* 헤더 스타일 */
+    .header-container {
+        padding: 15px;
+    }
+    
+    /* 컨테이너 패딩 조정 */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* 섹션 패딩 조정 */
+    section {
+        padding: 60px 0;
+    }
+    
+    /* 페이지 헤더 조정 */
+    .page-header {
+        padding: 80px 0;
+    }
+    
+    .page-header h1 {
+        font-size: 36px;
+    }
+    
+    /* 탭 버튼 조정 */
+    .tab-btn {
+        padding: 10px 20px;
+    }
+    
+    /* 푸터 조정 */
+    .footer-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 헤더 스타일 */
+    .header-container {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    /* 히어로 섹션 조정 */
+    .hero {
+        padding: 100px 0;
+    }
+    
+    .hero h2 {
+        font-size: 32px;
+    }
+    
+    /* 버튼 그룹 조정 */
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* 탭 버튼 조정 */
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+        border-radius: 4px;
+        margin-bottom: 5px;
+    }
+    
+    /* 모바일 메뉴 스타일 */
+    .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    nav {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        width: 100%;
+    }
+    
+    nav.active {
+        max-height: 300px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    /* 페이지 헤더 조정 */
+    .page-header h1 {
+        font-size: 28px;
+    }
+    
+    .page-header p {
+        font-size: 16px;
+    }
+    
+    /* 정보 카드 조정 */
+    .info-card {
+        padding: 20px;
+    }
+    
+    /* 폼 조정 */
+    .contact-form, .reservation-form {
+        padding: 20px;
+    }
+    
+    /* 테이블 스타일 조정 */
+    .hole-table, .price-table {
+        font-size: 14px;
+    }
+    
+    .hole-table th, .hole-table td,
+    .price-table th, .price-table td {
+        padding: 8px;
+    }
+}
+
+/* 코스 페이지 반응형 스타일 */
+@media (max-width: 992px) {
+    .course-info {
+        flex-direction: column;
+    }
+    
+    .course-image {
+        margin-top: 20px;
+    }
+    
+    .course-stats {
+        flex-wrap: wrap;
+    }
+    
+    .stat {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+    
+    .hole-table-container {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tips-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .tip {
+        margin-bottom: 20px;
+    }
+    
+    .stat {
+        width: 100%;
+    }
+}
+
+/* 시설 페이지 반응형 스타일 */
+@media (max-width: 992px) {
+    .facility {
+        flex-direction: column;
+    }
+    
+    .facility-image {
+        min-height: 250px;
+    }
+    
+    .facility-content {
+        padding: 30px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hours-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hours-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hours-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* 예약 페이지 반응형 스타일 */
+@media (max-width: 992px) {
+    .price-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .fees-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .policy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .policy-item {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fees-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fee-item {
+        margin-bottom: 20px;
+    }
+    
+    .price-table-container {
+        overflow-x: auto;
+    }
+    
+    .faq-question h3 {
+        font-size: 16px;
+    }
+}
+
+/* 오시는 길 페이지 반응형 스타일 */
+@media (max-width: 992px) {
+    .info-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .nearby-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .map-placeholder {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-card {
+        margin-bottom: 20px;
+    }
+    
+    .nearby-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nearby-item {
+        margin-bottom: 20px;
+    }
+    
+    .map-buttons {
+        flex-direction: column;
+    }
+    
+    .map-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .direction-tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}

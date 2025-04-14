@@ -161,3 +161,96 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// 모바일 메뉴 토글 기능 강화
+document.addEventListener('DOMContentLoaded', function() {
+    // 모바일 메뉴 구현
+    const createMobileMenu = () => {
+        const header = document.querySelector('header');
+        const nav = document.querySelector('nav');
+        
+        // 이미 모바일 메뉴 버튼이 있는지 확인
+        if (document.querySelector('.mobile-menu-btn')) {
+            return;
+        }
+        
+        // 모바일 메뉴 버튼 생성
+        const mobileMenuBtn = document.createElement('div');
+        mobileMenuBtn.className = 'mobile-menu-btn';
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        mobileMenuBtn.style.display = 'none'; // 초기에는 보이지 않음
+        
+        // 헤더에 모바일 메뉴 버튼 추가
+        header.insertBefore(mobileMenuBtn, nav);
+        
+        // 모바일 메뉴 토글 이벤트
+        mobileMenuBtn.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            
+            // 아이콘 변경 (메뉴/닫기)
+            if (nav.classList.contains('active')) {
+                mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+        
+        // 반응형 처리 함수
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                mobileMenuBtn.style.display = 'block';
+                nav.classList.remove('active'); // 크기 변경 시 메뉴 닫기
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            } else {
+                mobileMenuBtn.style.display = 'none';
+                nav.classList.remove('active');
+                nav.style.maxHeight = '';
+            }
+        };
+        
+        // 초기 실행
+        handleResize();
+        
+        // 창 크기 변경 이벤트
+        window.addEventListener('resize', handleResize);
+    };
+    
+    // 메뉴 항목 클릭 시 모바일 메뉴 닫기
+    const setupMenuItemClick = () => {
+        const menuItems = document.querySelectorAll('nav ul li a');
+        const nav = document.querySelector('nav');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    nav.classList.remove('active');
+                    if (mobileMenuBtn) {
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+    };
+    
+    // 함수 실행
+    createMobileMenu();
+    setupMenuItemClick();
+    
+    // 반응형 스타일시트 추가
+    const addResponsiveStyles = () => {
+        // 이미 추가된 스타일시트가 있는지 확인
+        if (document.getElementById('responsive-styles')) {
+            return;
+        }
+        
+        const link = document.createElement('link');
+        link.id = 'responsive-styles';
+        link.rel = 'stylesheet';
+        link.href = 'css/responsive.css';
+        document.head.appendChild(link);
+    };
+    
+    // 반응형 스타일 추가
+    addResponsiveStyles();
+});
