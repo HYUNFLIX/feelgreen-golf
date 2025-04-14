@@ -1,0 +1,441 @@
+/* 오시는 길 페이지 스타일 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 페이지 헤더 */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/contact-header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.page-header p {
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* 섹션 공통 스타일 */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #2c7744;
+    text-align: center;
+}
+
+/* 연락처 정보 카드 */
+.contact-info {
+    background-color: white;
+    padding: 80px 0 50px;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.info-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+.info-card i {
+    font-size: 36px;
+    color: #2c7744;
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.info-card p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.info-card .btn {
+    margin-top: 10px;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* 지도 섹션 */
+.map-section {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.map-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.map-overlay p {
+    margin-bottom: 10px;
+    max-width: 80%;
+    line-height: 1.6;
+}
+
+.map-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.map-btn {
+    display: inline-flex;
+    align-items: center;
+}
+
+.map-btn i {
+    margin-right: 8px;
+}
+
+/* 교통 안내 */
+.directions {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.direction-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    background-color: transparent;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: #2c7744;
+}
+
+.tab-btn.active {
+    color: #2c7744;
+    border-bottom-color: #2c7744;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.direction-ways {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.way {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.way:last-child {
+    margin-bottom: 0;
+}
+
+.way h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #2c7744;
+}
+
+.way h3 i {
+    margin-right: 10px;
+}
+
+.way ol, .way ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.way ol li, .way ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.driving-time {
+    font-weight: 500;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.driving-time i {
+    margin-right: 8px;
+    color: #2c7744;
+}
+
+.parking-info {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px dashed #ddd;
+}
+
+.shuttle-route, .shuttle-time, .shuttle-notes {
+    margin-bottom: 30px;
+}
+
+.shuttle-route h4, .shuttle-time h4, .shuttle-notes h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.shuttle-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.shuttle-table th, .shuttle-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.shuttle-table th {
+    background-color: #f1f8f1;
+    font-weight: 500;
+}
+
+.shuttle-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* 주변 정보 */
+.nearby-info {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.nearby-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.nearby-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.nearby-item:hover {
+    transform: translateY(-10px);
+}
+
+.nearby-item i {
+    font-size: 36px;
+    color: #2c7744;
+    margin-bottom: 20px;
+}
+
+.nearby-item h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.nearby-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.nearby-item ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* 문의 양식 */
+.contact-form-section {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.contact-form-section p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label input {
+    margin-right: 10px;
+    width: auto;
+}
+
+.form-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* 에러 스타일 */
+.error {
+    border-color: #e74c3c !important;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 992px) {
+    .info-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .nearby-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nearby-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+    }
+}
